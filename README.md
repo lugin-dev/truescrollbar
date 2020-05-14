@@ -49,7 +49,7 @@ new TrueScrollBar(document.body, {takeMarkup: true})
 ```HTML
 <template lang="pug">
 
-   div($ref='myScroll')
+   div(ref='myScroll')
        p TrueScrollBar ease to use and customize
        p TrueScrollBar ease to use and customize
        p TrueScrollBar ease to use and customize
