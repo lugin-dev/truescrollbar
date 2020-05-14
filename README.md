@@ -39,7 +39,11 @@ import '@lugindev/truescrollbar/TrueScrollBar.min.css'
 ### Use in JS
 ```JavaScript
 const el = document.querySelector('.you-element')
-new TrueScrollBar(el, {...options} // optional)
+new TrueScrollBar(el)
+
+// with options
+new TrueScrollBar(document.body, {takeMarkup: true})
+
 ```
 ### Use in VUE
 ```HTML
