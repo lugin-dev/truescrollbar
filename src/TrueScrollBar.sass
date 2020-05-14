@@ -1,0 +1,51 @@
+$scrollWidth: 4px
+
+.tsb-target
+    position: relative
+    overflow: hidden
+    &.tsb-takemarkup
+        display: flex
+    &:hover, &:active
+        > .tsb-scroll
+            opacity: 1
+
+.tsb-drag
+    user-select: none
+
+.tsb-wrap
+    overflow: hidden
+    width: 100%
+    height: 100%
+    position: relative
+    z-index: 1
+    &.tsb-takemarkup
+        flex-shrink: 1
+        order: 1
+
+.tsb-inner
+    height: 100%
+    position: relative
+    padding: 0 0 0 0
+    overflow-y: scroll
+    box-sizing: border-box
+
+.tsb-scroll
+    position: absolute
+    top: 0
+    height: 100%
+    opacity: 0
+    transition: opacity .3s ease
+    z-index: 2
+    &.tsb-takemarkup
+        position: static
+        opacity: 1
+
+    &__bg
+        background-color: #d9dfe6
+        position: relative
+        height: 100%
+
+    &__bar
+        position: relative
+        width: $scrollWidth
+        background-color: #a0a8ba

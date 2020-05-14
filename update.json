@@ -1,0 +1,11 @@
+{
+    "packageManager": "npm",
+    "name": "TrueScrollBar",
+    "repo": "@lugindev/truescrollbar",
+    "files": {
+        "include": [
+            "TrueScrollBar.min.css",
+            "TrueScrollBar.min.js"
+        ]
+    }
+}
