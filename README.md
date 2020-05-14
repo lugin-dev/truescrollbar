@@ -2,8 +2,11 @@
 
 TrueScrollBar - light weight cusotm scrollbar lib (min.css + min.js ~ **7kB**)
 
-> The library does not remove the native scroll. She hides it.
-> **Appearance is easy to customize with CSS**
+- The library does not remove the native scroll. She hides it.
+- Appearance is easy to customize with CSS
+- Browser support IE11+
+
+---
 
 ![alt text](./assets/tsb-screen.png "Screen")
 
@@ -15,6 +18,7 @@ TrueScrollBar - light weight cusotm scrollbar lib (min.css + min.js ~ **7kB**)
 
 ## Usage
 
+### Install with NPM
 ```JavaScript
 npm i @lugindev/truescrollbar
 ```
@@ -22,19 +26,19 @@ npm i @lugindev/truescrollbar
 ```JavaScript
 import TrueScrollBar from '@lugindev/truescrollbar'
 import '@lugindev/truescrollbar/TrueScrollBar.min.css'
-
-const el = document.querySelector('.you-element')
-new TrueScrollBar(el, {...options} // optional)
 ```
 
-or use [jsdelivr](https://www.jsdelivr.com/package/npm/@lugindev/truescrollbar?path=src)
+### From CDN [jsdelivr](https://www.jsdelivr.com/package/npm/@lugindev/truescrollbar?path=src)
 
 ```HTML
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar@1/src/TrueScrollBar.min.css">
 <script src="https://cdn.jsdelivr.net/npm/@lugindev/truescrollbar@1/src/TrueScrollBar.min.js"></script>
 ```
+
+### Use in JS
 ```JavaScript
-new TrueScrollBar(el, options)
+const el = document.querySelector('.you-element')
+new TrueScrollBar(el, {...options} // optional)
 ```
 
 ## Options
