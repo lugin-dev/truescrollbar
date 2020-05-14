@@ -5,5 +5,6 @@ document.querySelectorAll('.scroll').forEach(el => {
 })
 new TrueScrollBar(document.body, {
     takeMarkup: true,
+    desktopOnly: true
     // rtl: true
 })

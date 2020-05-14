@@ -1,4 +1,4 @@
-import { browserScrollBarWidth } from '@lugindev/brohelper'
+import { browserScrollBarWidth, deviceIsMac, deviceUseCursor } from '@lugindev/brohelper'
 import './TrueScrollBar.sass'
 
 const raf = window.requestAnimationFrame ||
@@ -27,9 +27,11 @@ export default class TrueScrollBar {
      * @param {Object} options - options..
      * @param {Boolean} [options.takeMarkup=false] options.takeMarkup - true === don't position: absolute
      * @param {Boolean} [options.rtl=false] options.rtl - writing direction right to left
+     * @param {Boolean} [options.desktopOnly=false] options.desktopOnly - render only desctop device
      */
     constructor(el, options = {}) {
         const {
+            desktopOnly = false,
             takeMarkup = false,
             rtl = false
         } = options
@@ -37,16 +39,22 @@ export default class TrueScrollBar {
         this.el = el
         this.isBody = this.el === document.body
 
+        this.desktopOnly = desktopOnly
         this.takeMarkup = takeMarkup
         this.rtl = rtl
 
         /** @type {Number} */
-        this.scrollBarWidth = browserScrollBarWidth()
         this.scrollBarWidthDefault = 20
         this.lastScrollTop = -1
         this.rafSetCount = 0
 
-        this.init()
+        this.isMac = deviceIsMac()
+        this.isCursorDevice = deviceUseCursor()
+        this.scrollBarWidth = browserScrollBarWidth()
+
+        this.desktopOnly
+            ? (this.scrollBarWidth > 0 || this.isMac && this.isCursorDevice) && this.init()
+            : this.init()
     }
 
     init() {
