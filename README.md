@@ -1,10 +1,11 @@
 # TrueScrollBar
 
-TrueScrollBar - light weight cusotm scrollbar lib (min.css + min.js ~ **7kB**)
+TrueScrollBar - light weight custom scrollbar library (min.css + min.js ~ **7kB**)
 
 - The library does not remove the native scroll. She hides it.
 - Appearance is easy to customize with CSS
 - Browser support IE11+
+- Vanilla js
 
 ---
 
@@ -39,6 +40,33 @@ import '@lugindev/truescrollbar/TrueScrollBar.min.css'
 ```JavaScript
 const el = document.querySelector('.you-element')
 new TrueScrollBar(el, {...options} // optional)
+```
+### Use in VUE
+```HTML
+<template lang="pug">
+
+   div($ref='myScroll')
+       p TrueScrollBar ease to use and customize
+       p TrueScrollBar ease to use and customize
+       p TrueScrollBar ease to use and customize
+
+</template>
+
+<script>
+   import TrueScrollBar from '@lugindev/truescrollbar'
+   import '@lugindev/truescrollbar/TrueScrollBar.min.css'
+
+   export default {
+       mounted() {
+           new TrueScrollBar(this.$refs.myScroll)
+       }
+   }
+</script>
+
+<style lang="sass">
+   .tsb-scroll
+       // customize
+</style>
 ```
 
 ## Options
