@@ -50,6 +50,6 @@
         "webpack-dev-server": "^3.11.0"
     },
     "dependencies": {
-        "@lugindev/brohelper": "^1.0.5"
+        "@lugindev/brohelper": "^1.0.6"
     }
 }
