@@ -128,8 +128,10 @@ export default class TrueScrollBar {
 
         if (this.scrollRatio >= 1) {
             this.scroll.classList.add('tsb-scroll--hidden')
+            this.el.classList.add('tsb-hidden')
         } else {
             this.scroll.classList.remove('tsb-scroll--hidden')
+            this.el.classList.remove('tsb-hidden')
             this.bar.style.height = Math.max(this.scrollRatio * 100, 10) + '%'
             this.bar.style.top = (this.scrollTop / this.scrollHeight) * 100 + '%'
         }

@@ -7,7 +7,7 @@
         "src/*"
     ],
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --mode=production --colors --host 192.168.0.184",
+        "dev": "cross-env NODE_ENV=development webpack serve",
         "build": "cross-env NODE_ENV=production webpack"
     },
     "repository": {
@@ -34,6 +34,7 @@
     "devDependencies": {
         "@babel/core": "^7.9.6",
         "@babel/preset-env": "^7.9.6",
+        "@webpack-cli/serve": "^1.1.0",
         "autoprefixer": "^9.7.6",
         "babel-loader": "^8.1.0",
         "css-loader": "^3.5.3",
