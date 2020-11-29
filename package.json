@@ -1,6 +1,6 @@
 {
     "name": "@lugindev/truescrollbar",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "True simple custom scrollbar vanilla js",
     "main": "src/TrueScrollBar.min.js",
     "files": [
